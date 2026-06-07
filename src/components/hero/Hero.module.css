@@ -9,6 +9,7 @@
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+  height: calc(100vh - 149px);
 }
 
 .content {
@@ -22,6 +23,19 @@
 .title {
   font-size: 72px;
   font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-background-clip: text;
+}
+
+.subtitle {
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: 33px;
   font-family: var(--font-roboto);
   background: linear-gradient(
@@ -51,13 +65,25 @@
 }
 
 .heroImg {
-  width: 50%;
+  width: 40%;
+  height: 100%;
   z-index: 1;
 
   animation-name: floating;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+.slidingTextContainer {
+  position: absolute;
+  font-size: 50vh;
+  bottom: -120px;
+  white-space: nowrap;
+  color: #ffffff09;
+  width: 50%;
+  font-weight: bold;
+  user-select: none;
 }
 
 @keyframes floating {
@@ -105,7 +131,15 @@
     flex-direction: column-reverse;
   }
 
-  .content {
-    align-items: center;
+  .title{
+    text-align: center;
   }
-}
+
+  .contactBtn{
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .content {
+    align-items: flex-start;
+  }}
