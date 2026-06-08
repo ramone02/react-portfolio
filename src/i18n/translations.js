@@ -21,12 +21,12 @@ export const translations = {
       sectionLabel: "About me",
       headlineStart: "I'm a",
       headlineAccent1: "frontend developer",
-      headlineMiddle: "specialized in",
+      headlineMiddle: "with experience in",
       headlineAccent2: "React & TypeScript",
       name: "Leonardo Bellido",
       role: "Frontend Developer",
       description:
-        "Frontend Developer with 3+ years of experience building web applications for external clients. Specialized in React and TypeScript, with a strong focus on component architecture, code quality, and agile teamwork. Looking for remote opportunities where I can keep growing technically and contribute to real, scalable products.",
+        "Based in Argentina — remote-first from day one. I care about writing components that are easy to read, easy to change, and built to last. At Baufest I worked on radar monitoring systems and banking platforms, which taught me to think about performance and maintainability from the start. I'm currently studying Software Development at Universidad del Chubut, and I'm looking for a team where I can keep growing and contribute to products that matter.",
     },
     experience: {
       sectionLabel: "Experience",
@@ -39,15 +39,15 @@ export const translations = {
           name: "Radar consoles & real-time monitoring",
           bullets: [
             "Built critical configuration and monitoring interfaces adopted by external clients in high-complexity environments, reducing operational friction for the support team.",
-            "Integrated WebSockets for dynamic data updates, delivering a smooth experience in dashboards with high-frequency data changes.",
-            "Led the definition of React/TypeScript component standards, improving code consistency and reducing onboarding time for new developers.",
+            "Worked with WebSockets for dynamic data updates, delivering a smooth experience in dashboards with high-frequency data changes.",
+            "Participated in the definition of React/TypeScript component standards, improving code consistency and reducing onboarding time for new developers.",
           ],
         },
         {
           name: "Banking platforms",
           bullets: [
             "Developed frontend features used by thousands of users, with a focus on performance, accessibility, and user experience.",
-            "Built a reusable component library documented with Storybook, accelerating feature development and standardizing design across teams.",
+            "Participated in the creation of a reusable component library documented with Storybook, accelerating feature development and standardizing design across teams.",
             "Managed global state with Redux Toolkit in medium-to-high complexity applications, applying patterns that improved long-term maintainability.",
           ],
         },
@@ -56,6 +56,7 @@ export const translations = {
           bullets: [
             "Actively participated in code reviews and refactors, improving codebase maintainability and readability.",
             "Collaborated in multidisciplinary teams under Scrum methodology, with a focus on continuous value delivery.",
+            "Daily interaction with the client to understand their needs and adapt technical solutions to business requirements.",
           ],
         },
       ],
@@ -68,9 +69,9 @@ export const translations = {
     },
     contact: {
       sectionLabel: "Contact me",
-      headline1: "Have an idea?",
+      headline1: "Let's work together",
       headline2: "Let's build it",
-      headline3: "together.",
+      headline3: "I'm currently available for freelance work and full-time positions.",
       namePlaceholder: "Your name",
       emailPlaceholder: "your@email.com",
       messagePlaceholder: "Tell me about your project...",
@@ -106,12 +107,12 @@ export const translations = {
       sectionLabel: "Sobre mí",
       headlineStart: "Soy un",
       headlineAccent1: "frontend developer",
-      headlineMiddle: "especializado en",
+      headlineMiddle: "con experiencia en",
       headlineAccent2: "React y TypeScript",
       name: "Leonardo Bellido",
       role: "Frontend Developer",
       description:
-        "Frontend Developer con +3 años de experiencia construyendo aplicaciones web para clientes externos. Especializado en React y TypeScript, con foco en arquitectura de componentes, calidad de código y trabajo en equipos ágiles. Busco oportunidades remotas donde pueda seguir creciendo técnicamente y aportar valor en productos reales y escalables.",
+        "Desde Argentina — trabajando en remoto desde el primer día. Me importa escribir componentes que sean fáciles de leer, fáciles de modificar y pensados para durar. En Baufest trabajé en sistemas de monitoreo de radar y plataformas bancarias, lo que me enseñó a pensar en performance y mantenibilidad desde el inicio. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad del Chubut y busco un equipo donde pueda seguir creciendo y aportar a productos que tengan impacto.",
     },
     experience: {
       sectionLabel: "Experiencia",
@@ -124,16 +125,16 @@ export const translations = {
           name: "Consolas de radar y monitoreo en tiempo real",
           bullets: [
             "Desarrollé interfaces críticas adoptadas por clientes externos en entornos de alta complejidad, reduciendo la fricción operativa del equipo de soporte.",
-            "Integré WebSockets para actualización dinámica de datos, logrando una experiencia fluida en dashboards con alta frecuencia de cambios.",
-            "Lideré la definición de estándares de componentes React/TypeScript, mejorando la consistencia del código y reduciendo el tiempo de onboarding de nuevos desarrolladores.",
+            "Trabaje con WebSockets para actualización dinámica de datos, logrando una experiencia fluida en dashboards con alta frecuencia de cambios.",
+            "Participe en la definición de estándares de componentes React/TypeScript, mejorando la consistencia del código y reduciendo el tiempo de onboarding de nuevos desarrolladores.",
           ],
         },
         {
           name: "Plataformas bancarias",
           bullets: [
-            "Desarrollé funcionalidades frontend utilizadas por miles de usuarios, priorizando rendimiento, accesibilidad y experiencia de usuario.",
-            "Construí una librería de componentes reutilizables documentada con Storybook, acelerando el desarrollo de nuevas features y estandarizando el diseño entre equipos.",
-            "Gestioné el estado global con Redux Toolkit en aplicaciones de mediana y alta complejidad, aplicando patrones que facilitaron el mantenimiento a largo plazo.",
+            "Desarrollé funcionalidades frontend utilizadas por miles de usuarios",
+            "Participe en la creación de una librería de componentes reutilizables documentada con Storybook, acelerando el desarrollo de nuevas features y estandarizando el diseño entre equipos.",
+            "Manejo del el estado global con Redux Toolkit en aplicaciones de mediana y alta complejidad",
           ],
         },
         {
@@ -141,6 +142,7 @@ export const translations = {
           bullets: [
             "Participé activamente en code reviews y refactors, mejorando la mantenibilidad y legibilidad del código base.",
             "Colaboré en equipos multidisciplinarios bajo Scrum, con foco en entrega de valor continua.",
+            "Interaccion diaria con el cliente para entender sus necesidades y adaptar las soluciones técnicas a los requerimientos del negocio.",
           ],
         },
       ],
@@ -153,9 +155,9 @@ export const translations = {
     },
     contact: {
       sectionLabel: "Contacto",
-      headline1: "¿Tenés una idea?",
+      headline1: "Trabajemos juntos",
       headline2: "Construyámosla",
-      headline3: "juntos.",
+      headline3: "Actualmente estoy disponible para trabajo freelance y posiciones de tiempo completo.",
       namePlaceholder: "Tu nombre",
       emailPlaceholder: "tu@email.com",
       messagePlaceholder: "Contame sobre tu proyecto...",

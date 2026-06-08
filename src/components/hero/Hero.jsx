@@ -100,7 +100,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Columna de imagen */}
       <motion.div
         className={styles.imageCol}
         variants={fadeRight}

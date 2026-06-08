@@ -1,0 +1,133 @@
+@import "../../var.css";
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+}
+
+.headline {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: 52px;
+}
+
+/* Unused but kept for consistency */
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.card {
+  border-left: 2px solid var(--color-border);
+  padding-left: 28px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.company {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.period {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.role {
+  display: block;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project {
+  padding: 20px 24px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.project:hover {
+  border-color: rgba(129, 140, 248, 0.35);
+  background: rgba(129, 140, 248, 0.05);
+}
+
+.projectName {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bullets li {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+  padding-left: 16px;
+  position: relative;
+}
+
+.bullets li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 60px 20px;
+  }
+
+  .card {
+    padding-left: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
