@@ -12,7 +12,7 @@ function App() {
   return (
     <LanguageProvider>
       <div className={styles.App}>
-        <Particles />
+        {/* <Particles /> */}
         <Navbar />
         <main>
           <Hero />
