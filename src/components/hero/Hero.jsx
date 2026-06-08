@@ -34,7 +34,7 @@ const Hero = () => {
   const { badge, greeting, name, description, cta, cv, cvFile } = t.hero;
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="hero">
       <div className={styles.textCol}>
         <motion.h1
           className={styles.heading}
