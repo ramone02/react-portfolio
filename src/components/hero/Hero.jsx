@@ -1,107 +1,114 @@
-import styles from "./Hero.module.css";
-import me from "../../assets/perfil2.png";
-
 import { motion } from "motion/react";
+import styles from "./Hero.module.css";
+import me from "../../assets/perfil.png";
+import { useLanguage } from "../../context/LanguageContext";
 
-const textVariants = {
-  initial: {
-    x: -500,
-    opacity: 0,
-  },
-  animate: {
-    x: 0,
+const fadeUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: (i) => ({
     opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
-      staggerChildren: 0.1,
+      duration: 0.7,
+      delay: i * 0.15,
+      ease: [0.25, 0.1, 0.25, 1],
     },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-    },
-  },
+  }),
 };
 
-const sliderVariants = {
-  initial: {
-    x: 0,
-  },
+const fadeRight = {
+  initial: { opacity: 0, x: 30 },
   animate: {
-    x: "-220%",
+    opacity: 1,
+    x: 0,
     transition: {
-      repeat: Infinity,
-      repeatType: "mirror",
-      duration: 20,
+      duration: 0.9,
+      delay: 0.3,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
 
 const Hero = () => {
+  const { t } = useLanguage();
+  const { badge, greeting, name, description, cta, cv, cvFile } = t.hero;
+
   return (
     <section className={styles.container}>
-      <motion.div
-        className={styles.content}
-        variants={textVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.h1 className={styles.title} variants={textVariants}>
-          Leonardo Bellido
-        </motion.h1>
-        <motion.h2 className={styles.subtitle} variants={textVariants}>
-          Frontend Developer
-        </motion.h2>
-        <motion.p className={styles.description} variants={textVariants}>
-          I m a full-stack developer with 5 years of experience using React and
-          NodeJS. Reach out if you d like to learn more!
-        </motion.p>
-        <motion.a
-          href="mailto:myemail@email.com"
-          className={styles.contactBtn}
-          variants={textVariants}
-          animate="scrollButton"
-        >
-          Contact Me
-        </motion.a>
-      </motion.div>
-      {/* <div className="wrapper">
-        <motion.div
-          className="text-container"
-          variants={textVariants}
+      <div className={styles.textCol}>
+        <motion.h1
+          className={styles.heading}
+          custom={1}
+          variants={fadeUp}
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Leonardo Bellido</motion.h2>
-          <motion.h1 variants={textVariants}>Frontend developer</motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Work
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
-          <motion.img
-            variants={textVariants}
-            animate="scrollButton"
-            src="./scroll.png"
-            alt=""
-          />
+          {greeting} <span className={styles.accent}>{name}</span>
+        </motion.h1>
+
+        <motion.p
+          className={styles.description}
+          custom={2}
+          variants={fadeUp}
+          initial="initial"
+          animate="animate"
+        >
+          {description}
+        </motion.p>
+
+        <motion.div
+          className={styles.ctas}
+          custom={3}
+          variants={fadeUp}
+          initial="initial"
+          animate="animate"
+        >
+          <a href="mailto:leobellido@gmail.com" className={styles.btnPrimary}>
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            {cta}
+          </a>
+          <a href={cvFile} download className={styles.btnSecondary}>
+            <svg
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="12" y1="18" x2="12" y2="12" />
+              <line x1="9" y1="15" x2="15" y2="15" />
+            </svg>
+            {cv}
+          </a>
         </motion.div>
-      </div> */}
+      </div>
+
+      {/* Columna de imagen */}
       <motion.div
-        className={styles.slidingTextContainer}
-        variants={sliderVariants}
+        className={styles.imageCol}
+        variants={fadeRight}
         initial="initial"
         animate="animate"
       >
-        Frontend Developer
+        <img src={me} alt="Leonardo Bellido" className={styles.heroImg} />
       </motion.div>
-      <img src={me} alt="Hero image of me" className={styles.heroImg} />
-      <div className={styles.topBlur} />
-      <div className={styles.bottomBlur} />
     </section>
   );
 };

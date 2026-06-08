@@ -7,4 +7,10 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #13111c;
+}
+
+body {
+  background-color: #13111c;
+  color: #e2e8f0;
 }

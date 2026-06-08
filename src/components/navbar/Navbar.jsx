@@ -1,12 +1,13 @@
 import { useState } from "react";
-
 import styles from "./Navbar.module.css";
-
 import menuIcon from "../../assets/nav/menuIcon.png";
 import closeIcon from "../../assets/nav/closeIcon.png";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t, lang, toggleLang } = useLanguage();
+
   return (
     <nav className={styles.navbar}>
       <a className={styles.title} href="/">
@@ -23,17 +24,14 @@ const Navbar = () => {
           className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
           onClick={() => setMenuOpen(false)}
         >
+          <li><a href="#about">{t.nav.about}</a></li>
+          <li><a href="#experience">{t.nav.experience}</a></li>
+          <li><a href="#projects">{t.nav.projects}</a></li>
+          <li><a href="#contact">{t.nav.contact}</a></li>
           <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#experience">Experience</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <button className={styles.langToggle} onClick={(e) => { e.stopPropagation(); toggleLang(); }}>
+              {lang === "en" ? "ES" : "EN"}
+            </button>
           </li>
         </ul>
       </div>
