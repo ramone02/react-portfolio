@@ -28,8 +28,12 @@
   max-width: 700px;
 }
 
-.accentGreen {
+/* .accentGreen {
   color: var(--color-accent-green);
+} */
+ 
+ .accent {
+  color: var(--color-accent);
 }
 
 .body {
@@ -65,11 +69,6 @@
   color: var(--color-text-muted);
 }
 
-/* .imageWrapper {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-} */
 
 .photo {
   width: 100%;

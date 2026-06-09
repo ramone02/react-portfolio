@@ -2,6 +2,9 @@ import { useState } from "react";
 import styles from "./Contact.module.css";
 import me from "../../assets/perfil2.png";
 import { useLanguage } from "../../context/LanguageContext";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 
 /*
   El formulario actualmente es solo UI.
@@ -44,19 +47,7 @@ const Contact = () => {
   return (
     <section className={styles.container} id="contact">
       <span className={styles.sectionLabel}>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-        </svg>
+        <MdOutlineEmail />
         {sectionLabel}
       </span>
       <div className={styles.headlineContainer}>
@@ -67,7 +58,6 @@ const Contact = () => {
       </div>
 
       <div className={styles.body}>
-        {/* Form */}
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.field}>
             <label className={styles.label}>{nameLabel}</label>
@@ -106,23 +96,10 @@ const Contact = () => {
           </div>
           <button type="submit" className={styles.btnSend}>
             {send}
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="22" y1="2" x2="11" y2="13" />
-              <polygon points="22 2 15 22 11 13 2 9 22 2" />
-            </svg>
+            <IoIosSend />
           </button>
         </form>
 
-        {/* Card */}
         <div className={styles.card}>
           <div className={styles.cardHeader}>
             <img
@@ -137,25 +114,34 @@ const Contact = () => {
           </div>
           <p className={styles.cardText}>{cardText}</p>
           <div className={styles.cardLinks}>
-            <a href="mailto:leobellido@gmail.com" className={styles.cardLink}>
-              leobellido@gmail.com
-            </a>
-            <a
-              href="https://linkedin.com/in/leonardo-bellido"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.cardLink}
-            >
-              linkedin.com/in/leonardo-bellido
-            </a>
-            <a
-              href="https://github.com/ramone02"
-              target="_blank"
-              rel="noreferrer"
-              className={styles.cardLink}
-            >
-              github.com/ramone02
-            </a>
+            <div className={styles.iconLink}>
+              <MdOutlineEmail />
+              <a href="mailto:leobellido@gmail.com" className={styles.cardLink}>
+                leobellido@gmail.com
+              </a>
+            </div>
+            <div className={styles.iconLink}>
+              <FaLinkedin />
+              <a
+                href="https://linkedin.com/in/leonardo-bellido"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.cardLink}
+              >
+                linkedin.com/in/leonardo-bellido
+              </a>
+            </div>
+            <div className={styles.iconLink}>
+              <FaGithub />
+              <a
+                href="https://github.com/ramone02"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.cardLink}
+              >
+                github.com/ramone02
+              </a>
+            </div>
             <span className={styles.cardLocation}>📍 {location}</span>
           </div>
         </div>

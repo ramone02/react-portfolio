@@ -1,16 +1,6 @@
 import styles from "./Projects.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 
-/*
-  Para agregar proyectos, editá translations.js → projects.items con este formato:
-  {
-    title: "Nombre del proyecto",
-    description: "Descripción corta.",
-    tech: ["React", "TypeScript", "Node.js"],
-    repo: "https://github.com/leobellido/...",   // opcional
-    demo: "https://...",                           // opcional
-  }
-*/
 
 const ProjectCard = ({ project }) => (
   <div className={styles.card}>

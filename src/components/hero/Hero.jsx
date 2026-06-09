@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import styles from "./Hero.module.css";
 import me from "../../assets/perfil.png";
 import { useLanguage } from "../../context/LanguageContext";
+import { MdOutlineEmail } from "react-icons/md";
+import { IoMdDownload } from "react-icons/io";
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -64,37 +66,11 @@ const Hero = () => {
           animate="animate"
         >
           <a href="mailto:leobellido@gmail.com" className={styles.btnPrimary}>
-            <svg
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
+            <MdOutlineEmail size={20}/>
             {cta}
           </a>
           <a href={cvFile} download className={styles.btnSecondary}>
-            <svg
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-              <polyline points="14 2 14 8 20 8" />
-              <line x1="12" y1="18" x2="12" y2="12" />
-              <line x1="9" y1="15" x2="15" y2="15" />
-            </svg>
+            <IoMdDownload size={20}/>
             {cv}
           </a>
         </motion.div>

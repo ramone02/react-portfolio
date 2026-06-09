@@ -1,6 +1,7 @@
 import styles from "./About.module.css";
 import me from "../../assets/perfil2.png";
 import { useLanguage } from "../../context/LanguageContext";
+import { FaRegUser } from "react-icons/fa";
 
 const About = () => {
   const { t } = useLanguage();
@@ -18,19 +19,7 @@ const About = () => {
   return (
     <section className={styles.container} id="about">
       <span className={styles.sectionLabel}>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="8" r="4" />
-          <path d="M20 21a8 8 0 1 0-16 0" />
-        </svg>
+        <FaRegUser />
         {sectionLabel}
       </span>
 
@@ -38,9 +27,9 @@ const About = () => {
         <div className={styles.text}>
           <h2 className={styles.headline}>
             {headlineStart}{" "}
-            <span className={styles.accentGreen}>{headlineAccent1}</span>{" "}
+            <span className={styles.accent}>{headlineAccent1}</span>{" "}
             {headlineMiddle}{" "}
-            <span className={styles.accentGreen}>{headlineAccent2}</span>
+            <span className={styles.accent}>{headlineAccent2}</span>
           </h2>
           <p className={styles.description}>{description}</p>
         </div>
