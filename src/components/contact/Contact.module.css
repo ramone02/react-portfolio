@@ -107,9 +107,24 @@
   font-family: var(--font-sans);
 }
 
-.btnSend:hover {
+.btnSend:hover:not(:disabled) {
   opacity: 0.88;
   transform: translateY(-2px);
+}
+
+.btnSend:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feedbackSuccess {
+  font-size: 14px;
+  color: var(--color-accent-green);
+}
+
+.feedbackError {
+  font-size: 14px;
+  color: #f87171;
 }
 
 .card {

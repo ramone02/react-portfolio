@@ -154,7 +154,7 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 60px 20px 60px;
+    padding: 80px 20px 40px;
     gap: 20px;
   }
 

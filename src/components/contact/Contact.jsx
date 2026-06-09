@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
 import me from "../../assets/perfil2.png";
 import { useLanguage } from "../../context/LanguageContext";
@@ -6,13 +7,9 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 
-/*
-  El formulario actualmente es solo UI.
-  Para hacerlo funcional podés conectarlo a:
-  - EmailJS (https://emailjs.com) — gratis, sin backend
-  - Formspree (https://formspree.io) — más simple aún
-  Avisame y lo implementamos.
-*/
+const SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -28,20 +25,36 @@ const Contact = () => {
     emailPlaceholder,
     messagePlaceholder,
     send,
+    sending,
+    feedbackSuccess,
+    feedbackError,
     cardSubtitle,
     cardText,
     location,
   } = t.contact;
 
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm]       = useState({ name: "", email: "", message: "" });
+  const [status, setStatus]   = useState("idle"); // "idle" | "sending" | "success" | "error"
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: conectar a EmailJS o Formspree
-    console.log("Form submitted:", form);
+    setStatus("sending");
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        { name: form.name, email: form.email, message: form.message },
+        PUBLIC_KEY
+      );
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -94,10 +107,21 @@ const Contact = () => {
               required
             />
           </div>
-          <button type="submit" className={styles.btnSend}>
-            {send}
+          <button
+            type="submit"
+            className={styles.btnSend}
+            disabled={status === "sending"}
+          >
+            {status === "sending" ? sending : send}
             <IoIosSend />
           </button>
+
+          {status === "success" && (
+            <p className={styles.feedbackSuccess}>{feedbackSuccess}</p>
+          )}
+          {status === "error" && (
+            <p className={styles.feedbackError}>{feedbackError}</p>
+          )}
         </form>
 
         <div className={styles.card}>

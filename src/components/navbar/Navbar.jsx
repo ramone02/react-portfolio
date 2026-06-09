@@ -1,24 +1,28 @@
 import styles from "./Navbar.module.css";
 import { useLanguage } from "../../context/LanguageContext";
 
+const scrollTo = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 const Navbar = () => {
   const { t, lang, toggleLang } = useLanguage();
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="#hero">
+      <button className={styles.title} onClick={() => scrollTo("hero")}>
         Portfolio
-      </a>
+      </button>
       <ul className={styles.menuItems}>
         <li>
-          <a href="#about">{t.nav.about}</a>
+          <button onClick={() => scrollTo("about")}>{t.nav.about}</button>
         </li>
         <li>
-          <a href="#experience">{t.nav.experience}</a>
+          <button onClick={() => scrollTo("experience")}>{t.nav.experience}</button>
         </li>
-        {/* <li><a href="#projects">{t.nav.projects}</a></li> */}
+        {/* <li><button onClick={() => scrollTo("projects")}>{t.nav.projects}</button></li> */}
         <li>
-          <a href="#contact">{t.nav.contact}</a>
+          <button onClick={() => scrollTo("contact")}>{t.nav.contact}</button>
         </li>
         <li>
           <button className={styles.langToggle} onClick={toggleLang}>

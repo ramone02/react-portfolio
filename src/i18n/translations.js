@@ -26,7 +26,7 @@ export const translations = {
       name: "Leonardo Bellido",
       role: "Frontend Developer",
       description:
-        "Based in Argentina — remote-first from day one. I care about writing components that are easy to read, easy to change, and built to last. At Baufest I worked on radar monitoring systems and banking platforms, collaborating closely with backend teams and taking part in end-to-end testing and database validation. I also have knowledge of Java and SQL, which helps me understand the full system and communicate better across the stack. I'm currently studying Software Development at Universidad del Chubut, and I'm looking for a team where I can keep growing and contribute to products that matter.",
+        "Based in Argentina — remote-first from day one. I care about writing components that are easy to read, easy to change, and built to last. At Baufest I worked on radar monitoring systems and banking platforms, collaborating closely with backend teams and taking part in end-to-end testing and database validation. I also have knowledge of Java and SQL, which helps me understand the full system and communicate better across the stack. My level of English is B1. I'm currently studying Software Development at Universidad del Chubut, and I'm looking for a team where I can keep growing and contribute to products that matter.",
     },
     experience: {
       sectionLabel: "Experience",
@@ -79,6 +79,9 @@ export const translations = {
       emailLabel: "Email",
       messageLabel: "Message",
       send: "Send message",
+      sending: "Sending...",
+      feedbackSuccess: "✓ Message sent! I'll get back to you soon.",
+      feedbackError: "✗ Something went wrong. Try emailing me directly.",
       cardSubtitle: "Frontend Developer",
       cardText:
         "Looking for remote opportunities. Feel free to reach out — I'm always open to new projects and collaborations.",
@@ -112,7 +115,7 @@ export const translations = {
       name: "Leonardo Bellido",
       role: "Frontend Developer",
       description:
-        "Desde Argentina — trabajando en remoto desde el primer día. Me importa escribir componentes que sean fáciles de leer, fáciles de modificar y pensados para durar. En Baufest trabajé en sistemas de monitoreo de radar y plataformas bancarias, colaborando codo a codo con equipos de backend, participando en pruebas end-to-end y validaciones contra base de datos. También cuento con conocimientos en Java y SQL, lo que me ayuda a entender el sistema completo y comunicarme mejor con el resto del equipo. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad del Chubut y busco un equipo donde pueda seguir creciendo y aportar a productos que tengan impacto.",
+        "Desde Argentina — trabajando en remoto desde el primer día. Me importa escribir componentes que sean fáciles de leer, fáciles de modificar y pensados para durar. En Baufest trabajé en sistemas de monitoreo de radar y plataformas bancarias, colaborando codo a codo con equipos de backend, participando en pruebas end-to-end y validaciones contra base de datos. También cuento con conocimientos en Java y SQL, lo que me ayuda a entender el sistema completo y comunicarme mejor con el resto del equipo. Poseo un nivel de Ingles B1. Actualmente curso la Tecnicatura en Desarrollo de Software en la Universidad del Chubut y busco un equipo donde pueda seguir creciendo y aportar a productos que tengan impacto.",
     },
     experience: {
       sectionLabel: "Experiencia",
@@ -165,6 +168,9 @@ export const translations = {
       emailLabel: "Email",
       messageLabel: "Mensaje",
       send: "Enviar mensaje",
+      sending: "Enviando...",
+      feedbackSuccess: "✓ ¡Mensaje enviado! Te respondo pronto.",
+      feedbackError: "✗ Algo salió mal. Intentá escribirme directamente.",
       cardSubtitle: "Frontend Developer",
       cardText:
         "Busco oportunidades remotas. No dudes en escribirme — siempre estoy abierto a nuevos proyectos y colaboraciones.",
